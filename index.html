@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang='pt-br'>
+
+<head>
+  <title>Frangooo! - Calculadora de ração</title>
+  <link rel='stylesheet' href='style.css'>
+  <link rel='icon' type='image/x-icon' href='/assets/favicon.png'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <meta name='theme-color' content='#4CAF50'>
+
+  <meta name='author' content='Gabriel Ângelo Cerutti (@bill1300)' />
+  <meta name='keywords' content='ferramenta, calculadora, ração, aviário' />
+  <meta http-equiv='content-language' content='pt-br' />
+  <meta charset='UTF-8'>
+</head>
+
+<body>
+  <div class='container'>
+    <h1 class='titulo'>Frangooo!</h1>
+    <h2 class='subtitulo'>Calculadora de ração</h2>
+    <a href='https://github.com/Bill1300/frangooo?tab=readme-ov-file#readme' target="_blank" class='docs'>Ajuda</a>
+    <form id='aviarioForm' class='form-container'>
+      <div class='row'>
+        <div class='form-group'>
+          <label for='nomeAviario'>Identificação de aviário</label>
+          <input type='number' id='nomeAviario' name='nomeAviario'>
+        </div>
+        <div class='form-group'>
+          <label for='horarioAtual'>Horário atual</label>
+          <input type='datetime-local' id='horarioAtual' name='horarioAtual' required>
+        </div>
+        <div class='form-group'>
+          <label for='horarioApanha'>Horário de apanha</label>
+          <input type='datetime-local' id='horarioApanha' name='horarioApanha' required>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='form-group'>
+          <label for='horasRemover'>Número de aves vivas</label>
+          <input type='number' id='avesVivas' name='avesVivas' required>
+        </div>
+        <div class='form-group'>
+          <label for='racaoAtual'>Ração armazenada <span>(por quilo)</span></label>
+          <input type='number' id='racaoAtual' name='racaoAtual' required>
+        </div>
+        <div class='form-group'>
+          <label for='consumoAviario'>Consumo de ração diária <span>(por quilo)</span></label>
+          <input type='number' id='consumoAviario' name='consumoAviario' required>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='form-group'>
+          <label for='horasRemoverAcido'>Tempo para inserção de ácido <span>(em horas)</span></label>
+          <input type='number' id='horasRemoverAcido' name='horasRemoverAcido' min='44' max='52' required>
+        </div>
+        <div class='form-group'>
+          <label for='horasRemoverSilo'>Tempo para desligamento de silo <span>(em horas)</span></label>
+          <input type='number' id='horasRemoverSilo' name='horasRemoverSilo' min='8' max='16' required>
+        </div>
+        <div class='form-group'>
+          <label for='horasRemoverRacao'>Tempo para levantamento de linhas de ração <span>(em horas)</span></label>
+          <input type='number' id='horasRemoverRacao' name='horasRemoverRacao' min='4' max='8' required>
+        </div>
+      </div>
+
+      <button type='button' onclick='calcularRacao()'>Calcular</button>
+
+    </form>
+    <div id='resultado' class='resultado-container'></div>
+  </div>
+
+  <div id='blocoTarefas' class='container'>
+    <h2>Tarefas</h2>
+    <table id='tabela'>
+      <thead>
+        <tr>
+          <th>Identificação do aviário</th>
+          <th>Tarefa</th>
+          <th>Data/Hora</th>
+        </tr>
+      </thead>
+      <tbody id='tabelaOrdem'></tbody>
+    </table>
+  </div>
+  <p class='dev'>Desenvolvido por <a target='_blank' href='https://github.com/Bill1300'><b>@bill1300</b></a>.</p>
+  <p class='lic dev'>Frangooo © 2024 está licenciado sob <a
+      href='https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.en' target='_blank'><b>CC BY-NC-ND 4.0</b>.</a>
+  </p>
+  <script src='script.js'></script>
+
+</body>
+
+</html>

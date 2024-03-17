@@ -1,0 +1,250 @@
+/* style.css */
+
+/* Importando fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Estilos base do corpo */
+
+body {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: rgb(12, 95, 15);
+  background: linear-gradient(0deg, rgba(14, 110, 18, 1) 0%, rgba(76, 175, 80, 1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Estilos do container principal */
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Estilos das linhas (inputs) */
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.rowFlex {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos do título */
+
+.titulo {
+  text-align: center;
+  color: #333;
+  text-shadow: 3px 3px 0px #4CAF50;
+  user-select: none;
+  margin-bottom: 0;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #333;
+  user-select: none;
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+/* Estilos do botão de 'Ajuda' */
+
+.docs {
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+
+.docs:hover {
+  background-color: #45a049;
+}
+
+/* Estilos do formulário */
+
+.form-container {
+  margin-bottom: 20px;
+}
+
+/* Estilos dos grupos de formulário (labels e inputs) */
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #666;
+  margin: 0 8px;
+  min-height: 50px;
+}
+
+span {
+  font-size: 12px;
+  color: #999999;
+}
+
+/* Estilos dos inputs */
+
+input[type='text'],
+input[type='number'],
+input[type='datetime-local'] {
+  width: calc(100% - 30px);
+  padding: 8px;
+  margin-top: 5px;
+  margin-left: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Estilos do botão */
+
+button {
+  font-size: 16px;
+  width: calc(100% - 20px);
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#blocoTarefas {
+  display: none;
+}
+
+/* Estilos do botão 'Copiar' */
+
+.copiar {
+  max-width: 105px;
+  max-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Estilos para a tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Estilos para os cabeçalhos das colunas */
+th {
+  color: #333;
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para as células da tabela, exceto na última linha */
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para a última linha das células da tabela */
+tr:last-child td {
+  border-bottom: none;
+  /* Remove a borda inferior das células na última linha */
+}
+
+/* Estilos para as células de cabeçalho na última linha */
+tr:last-child th {
+  border-bottom: none;
+  /* Remove a borda inferior dos cabeçalhos na última linha */
+}
+
+/* Estilos para as células da tabela */
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilos ao passar o mouse sobre as linhas */
+tr:hover {
+  background-color: #ddd;
+}
+
+th:hover {
+  background-color: #bfbfbf;
+}
+
+/* Estilos do contêiner de resultado vazio */
+
+.resultado-container {
+  display: none;
+}
+
+.dev {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.dev a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.dev a:visited {
+  color: #fff;
+}
+
+.lic {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 0;
+}
+
+/* Media query para telas menores */
+
+@media only screen and (max-width: 800px) {
+  .row {
+    grid-template-columns: 1fr;
+    /* Altera para uma única coluna em telas menores */
+  }
+
+  .container {
+    margin: 14px;
+  }
+
+  label {
+    min-height: 25px;
+  }
+}
