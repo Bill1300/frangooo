@@ -11,7 +11,7 @@ Com nossa calculadora, você pode inserir informações como o nome do aviário,
 A calculadora é fácil de usar e oferece resultados precisos, ajudando você a planejar e gerenciar a alimentação de suas aves de forma eficiente.
 
 <div align="left">
-    <a href="https://bill1300.github.com/frangooo">
+    <a href="https://bill1300.github.io/frangooo">
       <img width="175" src="https://i.imgur.com/G1kCG6X.png">
     </a>
 </div>
